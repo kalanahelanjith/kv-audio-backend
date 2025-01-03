@@ -1,4 +1,5 @@
 import Product  from "../models/product.js";
+import user from "../models/user.js";
 
 export function addProduct(req, res){
 
