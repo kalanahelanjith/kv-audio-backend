@@ -32,9 +32,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    whatapp : {
+    profilePicture : {
         type : String,
-        required : true
+        required : true,
+        default:"https://goldsmithwebb-opticians.co.uk/about-us/meet-the-team/chelmsford/933-9332131_profile-picture-default-png-19/"
     },
 });
 
