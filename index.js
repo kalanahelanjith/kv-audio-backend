@@ -7,6 +7,7 @@ import productRouter from "./routes/productRouter.js";
 import jwt, { decode } from "jsonwebtoken"
 import dotenv from "dotenv";
 import reviewRouter from "./routes/reviewRouter.js";
+import inquiryRouter from "./routes/inquiryRouter.js";
 
 
 dotenv.config();
@@ -48,11 +49,22 @@ connection.once("open", ()=> {
 app.use("/api/users", userRouter);
 app.use("/api/products",productRouter);
 app.use("/api/reviews",reviewRouter);
-
+app.use("/api/inquiries",inquiryRouter);
 
 app.listen(3000,()=> {
     console.log("Server is runing on port 3000")
 })
 
-// Niran@gmail.com 123 - customer
-//kalana@gmail.com 123 - admin
+
+
+// { admin login
+//     "email": "malshanethmini@gmail.com",
+//     "password": "securePassword1234"
+   
+//   }
+//{ customer login
+//{
+  //  "email": "Niran@gmail.com",
+    //"password": "12345"
+//}
+//}
